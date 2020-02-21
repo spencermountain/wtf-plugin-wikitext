@@ -7,18 +7,18 @@ const infobox = require('./infobox')
 const image = require('./image')
 
 const plugin = function(models) {
-  models.Doc.wikitext = doc
+  models.Doc.prototype.wikitext = doc
 
-  models.Section.wikitext = section
+  models.Section.prototype.wikitext = section
 
-  models.Paragraph.wikitext = paragraph
+  models.Paragraph.prototype.wikitext = paragraph
 
-  models.Sentence.wikitext = sentence
+  models.Sentence.prototype.wikitext = sentence
 
-  models.Image.wikitext = image
+  models.Image.prototype.wikitext = image
 
-  models.Infobox.wikitext = infobox
-  // models.Template.wikitext = function(opts) {}
-  // models.Link.wikitext = link
+  models.Infobox.prototype.wikitext = infobox
+  // models.Template.prototype.wikitext = function(opts) {}
+  // models.Link.prototype.wikitext = link
 }
 module.exports = plugin
